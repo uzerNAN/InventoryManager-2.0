@@ -1,0 +1,165 @@
+\hypertarget{_linked_list_8h}{}\section{Linked\+List.\+h File Reference}
+\label{_linked_list_8h}\index{Linked\+List.\+h@{Linked\+List.\+h}}
+
+
+Simple Linked List that can have any pointer as the input.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_linked_list_8h_ab1a5f2fcda4f00dce92c82ebc30c4b3d}{}typedef struct \hyperlink{structlink}{link} {\bfseries link\+\_\+t}\label{_linked_list_8h_ab1a5f2fcda4f00dce92c82ebc30c4b3d}
+
+\item 
+\hypertarget{_linked_list_8h_a15376354e4e8b4f1732e9df17f30786c}{}typedef struct \hyperlink{structlist}{list} {\bfseries list\+\_\+t}\label{_linked_list_8h_a15376354e4e8b4f1732e9df17f30786c}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_linked_list_8h_a95d76edca6b694b79ec54acd31fe0b82}{list\+\_\+length} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list})
+\item 
+void \hyperlink{_linked_list_8h_a1b75d58df3617dd6ed7e545302cf450b}{list\+\_\+append} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list}, void $\ast$elem)
+\item 
+void \hyperlink{_linked_list_8h_a682b9de1af3ae61df29b90d5d7cf4635}{list\+\_\+prepend} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list}, void $\ast$elem)
+\item 
+bool \hyperlink{_linked_list_8h_afe1a0ddc6b9055b4e39d4f9a3b2a1fbf}{list\+\_\+insert} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list}, int indx, void $\ast$elem)
+\item 
+bool \hyperlink{_linked_list_8h_a732601cc6899d36f70062d628f5fa21b}{list\+\_\+remove} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list}, int indx, void $\ast$$\ast$elem)
+\item 
+void $\ast$ \hyperlink{_linked_list_8h_ad5c44858091edaf2b192d947586be0ff}{list\+\_\+get} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list}, int indx)
+\item 
+void \hyperlink{_linked_list_8h_aaa81c6145ec0c566b2c26cb953f1c4af}{list\+\_\+new} (\hyperlink{structlist}{list\+\_\+t} $\ast$$\ast$\hyperlink{structlist}{list})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple Linked List that can have any pointer as the input. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_linked_list_8h_a1b75d58df3617dd6ed7e545302cf450b}{}\index{Linked\+List.\+h@{Linked\+List.\+h}!list\+\_\+append@{list\+\_\+append}}
+\index{list\+\_\+append@{list\+\_\+append}!Linked\+List.\+h@{Linked\+List.\+h}}
+\subsubsection[{list\+\_\+append}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+append (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list, }
+\item[{void $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}\label{_linked_list_8h_a1b75d58df3617dd6ed7e545302cf450b}
+Insert elem pointer after the list 
+\begin{DoxyParams}{Parameters}
+{\em list} & pointer to the list \\
+\hline
+{\em elem} & the pointer for element to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{_linked_list_8h_ad5c44858091edaf2b192d947586be0ff}{}\index{Linked\+List.\+h@{Linked\+List.\+h}!list\+\_\+get@{list\+\_\+get}}
+\index{list\+\_\+get@{list\+\_\+get}!Linked\+List.\+h@{Linked\+List.\+h}}
+\subsubsection[{list\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ list\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list, }
+\item[{int}]{indx}
+\end{DoxyParamCaption}
+)}\label{_linked_list_8h_ad5c44858091edaf2b192d947586be0ff}
+Search function for linked list 
+\begin{DoxyParams}{Parameters}
+{\em list} & pointer to the list \\
+\hline
+{\em indx} & index to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer stored at given index or N\+U\+L\+L if there is no such index in the list 
+\end{DoxyReturn}
+\hypertarget{_linked_list_8h_afe1a0ddc6b9055b4e39d4f9a3b2a1fbf}{}\index{Linked\+List.\+h@{Linked\+List.\+h}!list\+\_\+insert@{list\+\_\+insert}}
+\index{list\+\_\+insert@{list\+\_\+insert}!Linked\+List.\+h@{Linked\+List.\+h}}
+\subsubsection[{list\+\_\+insert}]{\setlength{\rightskip}{0pt plus 5cm}bool list\+\_\+insert (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list, }
+\item[{int}]{indx, }
+\item[{void $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}\label{_linked_list_8h_afe1a0ddc6b9055b4e39d4f9a3b2a1fbf}
+Insert elem pointer to the list at given index 
+\begin{DoxyParams}{Parameters}
+{\em list} & pointer to the list \\
+\hline
+{\em indx} & index place in the list for insertion \\
+\hline
+{\em elem} & the element to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if succeeded, else false 
+\end{DoxyReturn}
+\hypertarget{_linked_list_8h_a95d76edca6b694b79ec54acd31fe0b82}{}\index{Linked\+List.\+h@{Linked\+List.\+h}!list\+\_\+length@{list\+\_\+length}}
+\index{list\+\_\+length@{list\+\_\+length}!Linked\+List.\+h@{Linked\+List.\+h}}
+\subsubsection[{list\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}int list\+\_\+length (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}\label{_linked_list_8h_a95d76edca6b694b79ec54acd31fe0b82}
+Length of the list 
+\begin{DoxyParams}{Parameters}
+{\em list} & a pointer of the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of the inputted list 
+\end{DoxyReturn}
+\hypertarget{_linked_list_8h_aaa81c6145ec0c566b2c26cb953f1c4af}{}\index{Linked\+List.\+h@{Linked\+List.\+h}!list\+\_\+new@{list\+\_\+new}}
+\index{list\+\_\+new@{list\+\_\+new}!Linked\+List.\+h@{Linked\+List.\+h}}
+\subsubsection[{list\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$$\ast$}]{list}
+\end{DoxyParamCaption}
+)}\label{_linked_list_8h_aaa81c6145ec0c566b2c26cb953f1c4af}
+Create new list 
+\begin{DoxyParams}{Parameters}
+{\em list} & a pointer of a pointer where new list will be stored \\
+\hline
+\end{DoxyParams}
+\hypertarget{_linked_list_8h_a682b9de1af3ae61df29b90d5d7cf4635}{}\index{Linked\+List.\+h@{Linked\+List.\+h}!list\+\_\+prepend@{list\+\_\+prepend}}
+\index{list\+\_\+prepend@{list\+\_\+prepend}!Linked\+List.\+h@{Linked\+List.\+h}}
+\subsubsection[{list\+\_\+prepend}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+prepend (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list, }
+\item[{void $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}\label{_linked_list_8h_a682b9de1af3ae61df29b90d5d7cf4635}
+Insert elem pointer before the list 
+\begin{DoxyParams}{Parameters}
+{\em list} & pointer to the list \\
+\hline
+{\em elem} & the pointer for element to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{_linked_list_8h_a732601cc6899d36f70062d628f5fa21b}{}\index{Linked\+List.\+h@{Linked\+List.\+h}!list\+\_\+remove@{list\+\_\+remove}}
+\index{list\+\_\+remove@{list\+\_\+remove}!Linked\+List.\+h@{Linked\+List.\+h}}
+\subsubsection[{list\+\_\+remove}]{\setlength{\rightskip}{0pt plus 5cm}bool list\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list, }
+\item[{int}]{indx, }
+\item[{void $\ast$$\ast$}]{elem}
+\end{DoxyParamCaption}
+)}\label{_linked_list_8h_a732601cc6899d36f70062d628f5fa21b}
+Remove an element from a list. 
+\begin{DoxyParams}{Parameters}
+{\em list} & pointer to the list \\
+\hline
+{\em index} & the index to be removed \\
+\hline
+{\em elem} & a pointer to where the element can be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if succeeded, else false 
+\end{DoxyReturn}

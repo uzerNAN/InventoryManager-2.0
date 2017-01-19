@@ -1,0 +1,190 @@
+\hypertarget{_a_v_ltree_8h}{}\section{A\+V\+Ltree.\+h File Reference}
+\label{_a_v_ltree_8h}\index{A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}}
+
+
+Simple self-\/balancing search tree that can have any pointer as the input.  
+
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_a_v_ltree_8h_aabd08cfd7893b1b0d401ce689de8c1b7}{}typedef struct \hyperlink{structtree}{tree} {\bfseries tree\+\_\+t}\label{_a_v_ltree_8h_aabd08cfd7893b1b0d401ce689de8c1b7}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_a_v_ltree_8h_a05bee47c2853a6ef6e28c3d633060921}{tree\+\_\+new} (\hyperlink{structtree}{tree\+\_\+t} $\ast$$\ast$\hyperlink{structtree}{tree})
+\item 
+int \hyperlink{_a_v_ltree_8h_a13827cc121c0826bccee80991ac7dd04}{tree\+\_\+size} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree})
+\item 
+\hypertarget{_a_v_ltree_8h_af6673d3ab7876bc6ea60c9886ad92d75}{}int {\bfseries tree\+\_\+index\+\_\+compare} (char $\ast$index\+\_\+one, char $\ast$index\+\_\+two)\label{_a_v_ltree_8h_af6673d3ab7876bc6ea60c9886ad92d75}
+
+\item 
+int \hyperlink{_a_v_ltree_8h_a08702a27d2f0804a5e6903496086cf46}{tree\+\_\+insert} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree}, char $\ast$index, void $\ast$value)
+\item 
+void \hyperlink{_a_v_ltree_8h_a17a299c752eb17b551359a8dd7156283}{tree\+\_\+remove} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree}, int index\+\_\+pos, void $\ast$$\ast$elem)
+\item 
+void $\ast$ \hyperlink{_a_v_ltree_8h_a46e04d4453ab3edf8cd9e2272ef9d85f}{tree\+\_\+search} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree}, char $\ast$index)
+\item 
+int \hyperlink{_a_v_ltree_8h_a9331be68dee7da95ee61fdf7f99d258c}{tree\+\_\+index\+\_\+pos\+\_\+search} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree}, char $\ast$index)
+\item 
+char $\ast$ \hyperlink{_a_v_ltree_8h_a239d89224a268183960b36a01b41ac57}{tree\+\_\+index\+\_\+search} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree}, int index)
+\item 
+int \hyperlink{_a_v_ltree_8h_ad0d483ad1053e4f782ec1e496357ea1b}{tree\+\_\+print\+\_\+indexes} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree}, int start\+\_\+i, int max\+\_\+i)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple self-\/balancing search tree that can have any pointer as the input. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_a_v_ltree_8h_a9331be68dee7da95ee61fdf7f99d258c}{}\index{A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}!tree\+\_\+index\+\_\+pos\+\_\+search@{tree\+\_\+index\+\_\+pos\+\_\+search}}
+\index{tree\+\_\+index\+\_\+pos\+\_\+search@{tree\+\_\+index\+\_\+pos\+\_\+search}!A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}}
+\subsubsection[{tree\+\_\+index\+\_\+pos\+\_\+search}]{\setlength{\rightskip}{0pt plus 5cm}int tree\+\_\+index\+\_\+pos\+\_\+search (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree, }
+\item[{char $\ast$}]{index}
+\end{DoxyParamCaption}
+)}\label{_a_v_ltree_8h_a9331be68dee7da95ee61fdf7f99d258c}
+Search for index position(0,1,..) with index string 
+\begin{DoxyParams}{Parameters}
+{\em tree} & a pointer to the tree \\
+\hline
+{\em index} & a pointer to the index string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index position(0,1,..) of searched node 
+\end{DoxyReturn}
+\hypertarget{_a_v_ltree_8h_a239d89224a268183960b36a01b41ac57}{}\index{A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}!tree\+\_\+index\+\_\+search@{tree\+\_\+index\+\_\+search}}
+\index{tree\+\_\+index\+\_\+search@{tree\+\_\+index\+\_\+search}!A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}}
+\subsubsection[{tree\+\_\+index\+\_\+search}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ tree\+\_\+index\+\_\+search (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{_a_v_ltree_8h_a239d89224a268183960b36a01b41ac57}
+Search for the index pointer in the list of indexes of the tree 
+\begin{DoxyParams}{Parameters}
+{\em tree} & pointer to the tree \\
+\hline
+{\em index} & number of index of the node in the tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to index string stored at given index number 
+\end{DoxyReturn}
+\hypertarget{_a_v_ltree_8h_a08702a27d2f0804a5e6903496086cf46}{}\index{A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}!tree\+\_\+insert@{tree\+\_\+insert}}
+\index{tree\+\_\+insert@{tree\+\_\+insert}!A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}}
+\subsubsection[{tree\+\_\+insert}]{\setlength{\rightskip}{0pt plus 5cm}int tree\+\_\+insert (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree, }
+\item[{char $\ast$}]{index, }
+\item[{void $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{_a_v_ltree_8h_a08702a27d2f0804a5e6903496086cf46}
+Insert value at given index in the tree 
+\begin{DoxyParams}{Parameters}
+{\em tree} & pointer to the tree \\
+\hline
+{\em index} & pointer for the string to be used as index for inserted value \\
+\hline
+{\em value} & pointer to the value for insertion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index position(0,1,..) of inserted node in the tree 
+\end{DoxyReturn}
+\hypertarget{_a_v_ltree_8h_a05bee47c2853a6ef6e28c3d633060921}{}\index{A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}!tree\+\_\+new@{tree\+\_\+new}}
+\index{tree\+\_\+new@{tree\+\_\+new}!A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}}
+\subsubsection[{tree\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}void tree\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$$\ast$}]{tree}
+\end{DoxyParamCaption}
+)}\label{_a_v_ltree_8h_a05bee47c2853a6ef6e28c3d633060921}
+Create new tree 
+\begin{DoxyParams}{Parameters}
+{\em tree} & a pointer of a pointer which will point to the new tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{_a_v_ltree_8h_ad0d483ad1053e4f782ec1e496357ea1b}{}\index{A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}!tree\+\_\+print\+\_\+indexes@{tree\+\_\+print\+\_\+indexes}}
+\index{tree\+\_\+print\+\_\+indexes@{tree\+\_\+print\+\_\+indexes}!A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}}
+\subsubsection[{tree\+\_\+print\+\_\+indexes}]{\setlength{\rightskip}{0pt plus 5cm}int tree\+\_\+print\+\_\+indexes (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree, }
+\item[{int}]{start\+\_\+i, }
+\item[{int}]{max\+\_\+i}
+\end{DoxyParamCaption}
+)}\label{_a_v_ltree_8h_ad0d483ad1053e4f782ec1e496357ea1b}
+Print list of indexes within given limits 
+\begin{DoxyParams}{Parameters}
+{\em tree} & pointer to the tree \\
+\hline
+{\em start\+\_\+i} & first index for print \\
+\hline
+{\em max\+\_\+i} & amount of maximum printed indexes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(start\+\_\+i+max\+\_\+i) or the size of the tree if there is no such index number as (start\+\_\+i+max\+\_\+i) 
+\end{DoxyReturn}
+\hypertarget{_a_v_ltree_8h_a17a299c752eb17b551359a8dd7156283}{}\index{A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}!tree\+\_\+remove@{tree\+\_\+remove}}
+\index{tree\+\_\+remove@{tree\+\_\+remove}!A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}}
+\subsubsection[{tree\+\_\+remove}]{\setlength{\rightskip}{0pt plus 5cm}void tree\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree, }
+\item[{int}]{index\+\_\+pos, }
+\item[{void $\ast$$\ast$}]{elem}
+\end{DoxyParamCaption}
+)}\label{_a_v_ltree_8h_a17a299c752eb17b551359a8dd7156283}
+Remove node at given index in the tree 
+\begin{DoxyParams}{Parameters}
+{\em tree} & pointer to the tree \\
+\hline
+{\em index\+\_\+pos} & index position of the node to be removed \\
+\hline
+{\em value} & pointer of the pointer where the value pointer of the removed node can be stored \\
+\hline
+\end{DoxyParams}
+\hypertarget{_a_v_ltree_8h_a46e04d4453ab3edf8cd9e2272ef9d85f}{}\index{A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}!tree\+\_\+search@{tree\+\_\+search}}
+\index{tree\+\_\+search@{tree\+\_\+search}!A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}}
+\subsubsection[{tree\+\_\+search}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ tree\+\_\+search (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree, }
+\item[{char $\ast$}]{index}
+\end{DoxyParamCaption}
+)}\label{_a_v_ltree_8h_a46e04d4453ab3edf8cd9e2272ef9d85f}
+Search for the value pointer in the tree 
+\begin{DoxyParams}{Parameters}
+{\em tree} & pointer to the tree \\
+\hline
+{\em index} & index for the node to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer stored at given index or N\+U\+L\+L if there is no such index in the tree 
+\end{DoxyReturn}
+\hypertarget{_a_v_ltree_8h_a13827cc121c0826bccee80991ac7dd04}{}\index{A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}!tree\+\_\+size@{tree\+\_\+size}}
+\index{tree\+\_\+size@{tree\+\_\+size}!A\+V\+Ltree.\+h@{A\+V\+Ltree.\+h}}
+\subsubsection[{tree\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int tree\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree}
+\end{DoxyParamCaption}
+)}\label{_a_v_ltree_8h_a13827cc121c0826bccee80991ac7dd04}
+Get the size of the tree 
+\begin{DoxyParams}{Parameters}
+{\em tree} & pointer to the allocated tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of nodes in the tree 
+\end{DoxyReturn}

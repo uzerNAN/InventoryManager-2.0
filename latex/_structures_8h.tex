@@ -1,0 +1,169 @@
+\hypertarget{_structures_8h}{}\section{Structures.\+h File Reference}
+\label{_structures_8h}\index{Structures.\+h@{Structures.\+h}}
+
+
+A collection of small but useful help-\/functions, made for use of content and shelf features, combined with list and tree.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Linked\+List.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+V\+L\+Tree.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_structures_8h_aa22659a82ce63c9d49693304d0b318f3}{}typedef struct \hyperlink{structshelf}{shelf} {\bfseries shelf\+\_\+t}\label{_structures_8h_aa22659a82ce63c9d49693304d0b318f3}
+
+\item 
+\hypertarget{_structures_8h_a747ee4214cfa9afca5ac7083120bfa99}{}typedef struct \hyperlink{structcontent}{content} {\bfseries content\+\_\+t}\label{_structures_8h_a747ee4214cfa9afca5ac7083120bfa99}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_structures_8h_aa41bfc042b0535da6f303f69fba47db9}{}int {\bfseries get\+\_\+int\+\_\+size} (int n)\label{_structures_8h_aa41bfc042b0535da6f303f69fba47db9}
+
+\item 
+\hypertarget{_structures_8h_a013cca3aa02c0576c55b5261b8b686d9}{}void {\bfseries new\+\_\+shelf} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$$\ast$\hyperlink{structshelf}{shelf})\label{_structures_8h_a013cca3aa02c0576c55b5261b8b686d9}
+
+\item 
+\hypertarget{_structures_8h_aef19e54dcb79fbe4262b891def5be5ab}{}void {\bfseries new\+\_\+content} (\hyperlink{structcontent}{content\+\_\+t} $\ast$$\ast$\hyperlink{structcontent}{content})\label{_structures_8h_aef19e54dcb79fbe4262b891def5be5ab}
+
+\item 
+\hypertarget{_structures_8h_a2bee32ce1e1d518a9a15c65e0e2116ec}{}void {\bfseries new\+\_\+string} (char $\ast$$\ast$string, int size)\label{_structures_8h_a2bee32ce1e1d518a9a15c65e0e2116ec}
+
+\item 
+\hypertarget{_structures_8h_aa8057b82c781d890d0a9979833d7f7d8}{}void {\bfseries free\+\_\+string} (char $\ast$$\ast$string, int size)\label{_structures_8h_aa8057b82c781d890d0a9979833d7f7d8}
+
+\item 
+\hypertarget{_structures_8h_a7b56939ea9fcfeafc9d232ae72ededd5}{}void {\bfseries free\+\_\+shelf} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$$\ast$\hyperlink{structshelf}{shelf})\label{_structures_8h_a7b56939ea9fcfeafc9d232ae72ededd5}
+
+\item 
+\hypertarget{_structures_8h_a002f079f5c4155862116d88a3090af96}{}void {\bfseries free\+\_\+content} (\hyperlink{structcontent}{content\+\_\+t} $\ast$$\ast$\hyperlink{structcontent}{content})\label{_structures_8h_a002f079f5c4155862116d88a3090af96}
+
+\item 
+\hypertarget{_structures_8h_a1deb1ac368dcdf135e64ef40b5ad9b17}{}void {\bfseries prepare\+\_\+for\+\_\+free\+\_\+string} (char $\ast$string, int size)\label{_structures_8h_a1deb1ac368dcdf135e64ef40b5ad9b17}
+
+\item 
+\hypertarget{_structures_8h_a87ef2e9f06914e29b7815639c63d9001}{}void {\bfseries copy\+\_\+shelf} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$copy, \hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf})\label{_structures_8h_a87ef2e9f06914e29b7815639c63d9001}
+
+\item 
+\hypertarget{_structures_8h_a8527561ed25821f9c21ea06125f0e125}{}int {\bfseries shelf\+\_\+equal} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, \hyperlink{structshelf}{shelf\+\_\+t} $\ast$equal)\label{_structures_8h_a8527561ed25821f9c21ea06125f0e125}
+
+\item 
+\hypertarget{_structures_8h_a6d3307f0995f971b1d16f62b0590a9cf}{}void {\bfseries shelf\+\_\+to\+\_\+string} (char $\ast$s, \hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, int shelf\+\_\+size)\label{_structures_8h_a6d3307f0995f971b1d16f62b0590a9cf}
+
+\item 
+\hypertarget{_structures_8h_a803b9b6fe41aab5ffd3598c0e575a38a}{}void {\bfseries free\+\_\+shelf\+\_\+list} (\hyperlink{structlist}{list\+\_\+t} $\ast$shelfs)\label{_structures_8h_a803b9b6fe41aab5ffd3598c0e575a38a}
+
+\item 
+\hypertarget{_structures_8h_ab4caf82ef351862d49c14f2957c5a3d9}{}void {\bfseries free\+\_\+content\+\_\+shelfs} (\hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content})\label{_structures_8h_ab4caf82ef351862d49c14f2957c5a3d9}
+
+\item 
+\hypertarget{_structures_8h_a5f85942e138d410c92e7dc6d998576c9}{}int {\bfseries print\+\_\+shelfs} (\hyperlink{structlist}{list\+\_\+t} $\ast$shelfs)\label{_structures_8h_a5f85942e138d410c92e7dc6d998576c9}
+
+\item 
+\hypertarget{_structures_8h_a79793160b438fb1f169fea920c8c48fc}{}int {\bfseries show\+\_\+goods} (\hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content}, int shelf\+\_\+index)\label{_structures_8h_a79793160b438fb1f169fea920c8c48fc}
+
+\item 
+\hypertarget{_structures_8h_a7d18c3f1cfe43fa68a3ba00909abcd68}{}const char $\ast$ {\bfseries print\+\_\+not\+\_\+equal\+\_\+string} (char $\ast$string, char $\ast$not\+\_\+equal)\label{_structures_8h_a7d18c3f1cfe43fa68a3ba00909abcd68}
+
+\item 
+\hypertarget{_structures_8h_a9c1e8d6c371e695b01b29cbedcd3fd70}{}void {\bfseries copy\+\_\+string} (char $\ast$copy, char $\ast$string, int copy\+\_\+size)\label{_structures_8h_a9c1e8d6c371e695b01b29cbedcd3fd70}
+
+\item 
+\hypertarget{_structures_8h_a80de475d7959042d8f0706e7a464bf73}{}void {\bfseries clone\+\_\+content} (\hyperlink{structcontent}{content\+\_\+t} $\ast$clone, \hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content})\label{_structures_8h_a80de475d7959042d8f0706e7a464bf73}
+
+\item 
+\hypertarget{_structures_8h_a6e39249ea7fb7f12b6aec132bd51db41}{}void {\bfseries print\+\_\+side\+\_\+by\+\_\+side} (\hyperlink{structcontent}{content\+\_\+t} $\ast$first, \hyperlink{structcontent}{content\+\_\+t} $\ast$second, const char $\ast$first\+\_\+h, const char $\ast$second\+\_\+h)\label{_structures_8h_a6e39249ea7fb7f12b6aec132bd51db41}
+
+\item 
+\hypertarget{_structures_8h_ad90e0fa042998af4ef73e8b11fd5aca0}{}void {\bfseries copy\+\_\+shelf\+\_\+list} (\hyperlink{structlist}{list\+\_\+t} $\ast$copy, \hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list})\label{_structures_8h_ad90e0fa042998af4ef73e8b11fd5aca0}
+
+\item 
+\hypertarget{_structures_8h_ac06ca9513c1d8dc25066353e14c1ed5e}{}void {\bfseries copy\+\_\+content} (\hyperlink{structcontent}{content\+\_\+t} $\ast$copy, \hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content})\label{_structures_8h_ac06ca9513c1d8dc25066353e14c1ed5e}
+
+\item 
+\hypertarget{_structures_8h_a1c24fa0040f5de091f3eca677928f105}{}void {\bfseries show\+\_\+content\+\_\+shelf} (\hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content}, \hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf})\label{_structures_8h_a1c24fa0040f5de091f3eca677928f105}
+
+\item 
+\hypertarget{_structures_8h_aaacd2f1b16c30b030b0368d4fa5f10e5}{}void {\bfseries free\+\_\+content\+\_\+tree} (\hyperlink{structtree}{tree\+\_\+t} $\ast$$\ast$contents)\label{_structures_8h_aaacd2f1b16c30b030b0368d4fa5f10e5}
+
+\item 
+\hypertarget{_structures_8h_ac8b76e534e28ee6ea17010214dc685da}{}\hyperlink{structlist}{list\+\_\+t} $\ast$ {\bfseries get\+\_\+content\+\_\+shelfs} (\hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content})\label{_structures_8h_ac8b76e534e28ee6ea17010214dc685da}
+
+\item 
+\hypertarget{_structures_8h_a8394b00ed1573fa7ecce24ac90d6dd16}{}void {\bfseries set\+\_\+content\+\_\+shelfs} (\hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content}, \hyperlink{structlist}{list\+\_\+t} $\ast$shelfs)\label{_structures_8h_a8394b00ed1573fa7ecce24ac90d6dd16}
+
+\item 
+\hypertarget{_structures_8h_ab5d296e5f620f4f246046e93509ad7b2}{}void {\bfseries set\+\_\+shelf} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, char place, int number, int zero\+\_\+at\+\_\+start, int amount)\label{_structures_8h_ab5d296e5f620f4f246046e93509ad7b2}
+
+\item 
+\hypertarget{_structures_8h_a006afb1c144abdb276e6f9f3598833b7}{}void {\bfseries set\+\_\+shelf\+\_\+place} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, char place)\label{_structures_8h_a006afb1c144abdb276e6f9f3598833b7}
+
+\item 
+\hypertarget{_structures_8h_aa0728e3bf274e67a9c91fb2332af2fb3}{}void {\bfseries set\+\_\+shelf\+\_\+number} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, int number)\label{_structures_8h_aa0728e3bf274e67a9c91fb2332af2fb3}
+
+\item 
+\hypertarget{_structures_8h_aaa0f22237a0465f26f399211b23f4b75}{}void {\bfseries set\+\_\+shelf\+\_\+zero\+\_\+at\+\_\+start} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, int zero\+\_\+at\+\_\+start)\label{_structures_8h_aaa0f22237a0465f26f399211b23f4b75}
+
+\item 
+\hypertarget{_structures_8h_aa7b5be1dd2525145b6f3e7da718a3f5f}{}int {\bfseries get\+\_\+shelf\+\_\+zero\+\_\+at\+\_\+start} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf})\label{_structures_8h_aa7b5be1dd2525145b6f3e7da718a3f5f}
+
+\item 
+\hypertarget{_structures_8h_a93aa834edd302e4b53659a80f874acd7}{}int {\bfseries get\+\_\+shelf\+\_\+amount} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf})\label{_structures_8h_a93aa834edd302e4b53659a80f874acd7}
+
+\item 
+\hypertarget{_structures_8h_a40370ff92167141c07c6d793d8a7fd73}{}char {\bfseries get\+\_\+shelf\+\_\+place} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf})\label{_structures_8h_a40370ff92167141c07c6d793d8a7fd73}
+
+\item 
+\hypertarget{_structures_8h_af4d9048dd876ce300d7ba5cd1ea3c103}{}int {\bfseries get\+\_\+shelf\+\_\+number} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf})\label{_structures_8h_af4d9048dd876ce300d7ba5cd1ea3c103}
+
+\item 
+\hypertarget{_structures_8h_a7704d0f016b4c4ec36aaa54f8b13abce}{}void {\bfseries set\+\_\+shelf\+\_\+amount} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, int amount)\label{_structures_8h_a7704d0f016b4c4ec36aaa54f8b13abce}
+
+\item 
+\hypertarget{_structures_8h_a78b747a36e4ca1dde9e411435fb2686c}{}char $\ast$ {\bfseries get\+\_\+content\+\_\+name} (\hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content})\label{_structures_8h_a78b747a36e4ca1dde9e411435fb2686c}
+
+\item 
+\hypertarget{_structures_8h_ae3774a7c6b19d14b7df739c0bbec4446}{}char $\ast$ {\bfseries get\+\_\+content\+\_\+description} (\hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content})\label{_structures_8h_ae3774a7c6b19d14b7df739c0bbec4446}
+
+\item 
+\hypertarget{_structures_8h_a42cd556a9ab7dcdf54e0c0a028a1e4de}{}int {\bfseries get\+\_\+content\+\_\+price} (\hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content})\label{_structures_8h_a42cd556a9ab7dcdf54e0c0a028a1e4de}
+
+\item 
+\hypertarget{_structures_8h_a538fa61f2923a5333fd58ae81fca9c26}{}void {\bfseries set\+\_\+content\+\_\+price} (\hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content}, int price)\label{_structures_8h_a538fa61f2923a5333fd58ae81fca9c26}
+
+\item 
+\hypertarget{_structures_8h_a1d202551cdf3598bd10733a5bca0c106}{}int {\bfseries get\+\_\+shelf\+\_\+index} (\hyperlink{structlist}{list\+\_\+t} $\ast$shelfs, \hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf})\label{_structures_8h_a1d202551cdf3598bd10733a5bca0c106}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_structures_8h_a4a6c9b49188509ae8cf62b47052fd3ac}{}const int {\bfseries N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+T\+H}\label{_structures_8h_a4a6c9b49188509ae8cf62b47052fd3ac}
+
+\item 
+\hypertarget{_structures_8h_a79d463902464ed65e83425387edaf700}{}const int {\bfseries D\+E\+S\+C\+\_\+\+L\+E\+N\+G\+T\+H}\label{_structures_8h_a79d463902464ed65e83425387edaf700}
+
+\item 
+\hypertarget{_structures_8h_aae780208798a2caf88245e9ab4b8f285}{}const size\+\_\+t {\bfseries A\+L\+L\+O\+C\+\_\+\+S\+H\+E\+L\+F}\label{_structures_8h_aae780208798a2caf88245e9ab4b8f285}
+
+\item 
+\hypertarget{_structures_8h_a7b1be90438e05cca29336b92866be034}{}const size\+\_\+t {\bfseries A\+L\+L\+O\+C\+\_\+\+C\+O\+N\+T\+E\+N\+T}\label{_structures_8h_a7b1be90438e05cca29336b92866be034}
+
+\item 
+\hypertarget{_structures_8h_a5480b8d07cd52f90146db23efc66d143}{}const size\+\_\+t {\bfseries A\+L\+L\+O\+C\+\_\+\+C\+H\+A\+R}\label{_structures_8h_a5480b8d07cd52f90146db23efc66d143}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A collection of small but useful help-\/functions, made for use of content and shelf features, combined with list and tree. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}

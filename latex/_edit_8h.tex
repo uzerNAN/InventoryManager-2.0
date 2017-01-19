@@ -1,0 +1,85 @@
+\hypertarget{_edit_8h}{}\section{Edit.\+h File Reference}
+\label{_edit_8h}\index{Edit.\+h@{Edit.\+h}}
+
+
+Functions for edit contents in stored database tree. Provides textbased user interface.  
+
+
+{\ttfamily \#include \char`\"{}Structures.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_edit_8h_a287e1086c698e4ac261aed46ec7bf681}{edit\+\_\+shelf\+\_\+and\+\_\+amount} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content}, int shelf\+\_\+i)
+\item 
+int \hyperlink{_edit_8h_a15acc8413667a8a6c0683b60c5cf7f3b}{edit\+\_\+item} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, int index, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\item 
+void \hyperlink{_edit_8h_a35b39b948a5bed7a25e895162ce6e082}{edit\+\_\+goods} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for edit contents in stored database tree. Provides textbased user interface. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_edit_8h_a35b39b948a5bed7a25e895162ce6e082}{}\index{Edit.\+h@{Edit.\+h}!edit\+\_\+goods@{edit\+\_\+goods}}
+\index{edit\+\_\+goods@{edit\+\_\+goods}!Edit.\+h@{Edit.\+h}}
+\subsubsection[{edit\+\_\+goods}]{\setlength{\rightskip}{0pt plus 5cm}void edit\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_edit_8h_a35b39b948a5bed7a25e895162ce6e082}
+List content names and let the user to choose which content has to be edited, read user input and take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the database of contents in form of a tree \\
+\hline
+{\em last\+\_\+action} & a pointer to the list of previous actions \\
+\hline
+\end{DoxyParams}
+\hypertarget{_edit_8h_a15acc8413667a8a6c0683b60c5cf7f3b}{}\index{Edit.\+h@{Edit.\+h}!edit\+\_\+item@{edit\+\_\+item}}
+\index{edit\+\_\+item@{edit\+\_\+item}!Edit.\+h@{Edit.\+h}}
+\subsubsection[{edit\+\_\+item}]{\setlength{\rightskip}{0pt plus 5cm}int edit\+\_\+item (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{int}]{index, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_edit_8h_a15acc8413667a8a6c0683b60c5cf7f3b}
+Edit content from the tree at the given index position 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the database of contents in form of a tree \\
+\hline
+{\em index} & the index number of content \\
+\hline
+{\em last\+\_\+action} & a pointer to the list of previous actions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index position of edited content item 
+\end{DoxyReturn}
+\hypertarget{_edit_8h_a287e1086c698e4ac261aed46ec7bf681}{}\index{Edit.\+h@{Edit.\+h}!edit\+\_\+shelf\+\_\+and\+\_\+amount@{edit\+\_\+shelf\+\_\+and\+\_\+amount}}
+\index{edit\+\_\+shelf\+\_\+and\+\_\+amount@{edit\+\_\+shelf\+\_\+and\+\_\+amount}!Edit.\+h@{Edit.\+h}}
+\subsubsection[{edit\+\_\+shelf\+\_\+and\+\_\+amount}]{\setlength{\rightskip}{0pt plus 5cm}int edit\+\_\+shelf\+\_\+and\+\_\+amount (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf content\+\_\+t} $\ast$}]{content, }
+\item[{int}]{shelf\+\_\+i}
+\end{DoxyParamCaption}
+)}\label{_edit_8h_a287e1086c698e4ac261aed46ec7bf681}
+Edit given shelf place and/or amount of given shelf 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the database of contents in form of a tree \\
+\hline
+{\em content} & a pointer to the content that contains items name and the shelf list \\
+\hline
+{\em shelf\+\_\+i} & index position of the shelf in the shelf list of the given content \\
+\hline
+\end{DoxyParams}

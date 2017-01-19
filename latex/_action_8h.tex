@@ -1,0 +1,99 @@
+\hypertarget{_action_8h}{}\section{Action.\+h File Reference}
+\label{_action_8h}\index{Action.\+h@{Action.\+h}}
+
+
+A system to handle \char`\"{}change-\/making actions\char`\"{} in the inventory system and can successfully undo those changes step by step. Provides textbased user interface.  
+
+
+{\ttfamily \#include \char`\"{}Structures.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_action_8h_af3e5dac66861012f86b4bab83a9dc535}{put\+\_\+action\+\_\+pallet} (\hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action, \hyperlink{structtree}{tree\+\_\+t} $\ast$pallet)
+\item 
+void \hyperlink{_action_8h_a8833f9ed01758729454cd6aa27420c96}{put\+\_\+action\+\_\+goods} (\hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action, D\+O type, char $\ast$name, \hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, \hyperlink{structcontent}{content\+\_\+t} $\ast$item)
+\item 
+void \hyperlink{_action_8h_a13c032524d77429d2dcee9e30ef7cce9}{undo\+\_\+last\+\_\+action} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\item 
+void \hyperlink{_action_8h_a4270f3de0ebc1fafdc8c3fd293bf9359}{free\+\_\+action\+\_\+list} (\hyperlink{structlist}{list\+\_\+t} $\ast$$\ast$actions)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A system to handle \char`\"{}change-\/making actions\char`\"{} in the inventory system and can successfully undo those changes step by step. Provides textbased user interface. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_action_8h_a4270f3de0ebc1fafdc8c3fd293bf9359}{}\index{Action.\+h@{Action.\+h}!free\+\_\+action\+\_\+list@{free\+\_\+action\+\_\+list}}
+\index{free\+\_\+action\+\_\+list@{free\+\_\+action\+\_\+list}!Action.\+h@{Action.\+h}}
+\subsubsection[{free\+\_\+action\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+action\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$$\ast$}]{actions}
+\end{DoxyParamCaption}
+)}\label{_action_8h_a4270f3de0ebc1fafdc8c3fd293bf9359}
+Free action list and all unlinked(unused) datapointers inside each node 
+\begin{DoxyParams}{Parameters}
+{\em actions} & a pointer to pointer of allocated list of actions that made change in the database \\
+\hline
+\end{DoxyParams}
+\hypertarget{_action_8h_a8833f9ed01758729454cd6aa27420c96}{}\index{Action.\+h@{Action.\+h}!put\+\_\+action\+\_\+goods@{put\+\_\+action\+\_\+goods}}
+\index{put\+\_\+action\+\_\+goods@{put\+\_\+action\+\_\+goods}!Action.\+h@{Action.\+h}}
+\subsubsection[{put\+\_\+action\+\_\+goods}]{\setlength{\rightskip}{0pt plus 5cm}void put\+\_\+action\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action, }
+\item[{D\+O}]{type, }
+\item[{char $\ast$}]{name, }
+\item[{{\bf shelf\+\_\+t} $\ast$}]{shelf, }
+\item[{{\bf content\+\_\+t} $\ast$}]{item}
+\end{DoxyParamCaption}
+)}\label{_action_8h_a8833f9ed01758729454cd6aa27420c96}
+Collect the data and place it first in the list of actions 
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+action} & a pointer to allocated list of actions that made change in the database \\
+\hline
+{\em type} & the type of action as enum C\+O\+M\+M\+A\+N\+D, expected values are A\+D\+D, E\+D\+I\+T, R\+E\+M\+O\+V\+E or P\+A\+C\+K \\
+\hline
+{\em name} & a pointer to the index string of content in the database, N\+U\+L\+L might be passed as well \\
+\hline
+{\em shelf} & a pointer to the shelf, N\+U\+L\+L might be passed as well \\
+\hline
+{\em item} & a poiter to a content, N\+U\+L\+L might be passed as well \\
+\hline
+\end{DoxyParams}
+\hypertarget{_action_8h_af3e5dac66861012f86b4bab83a9dc535}{}\index{Action.\+h@{Action.\+h}!put\+\_\+action\+\_\+pallet@{put\+\_\+action\+\_\+pallet}}
+\index{put\+\_\+action\+\_\+pallet@{put\+\_\+action\+\_\+pallet}!Action.\+h@{Action.\+h}}
+\subsubsection[{put\+\_\+action\+\_\+pallet}]{\setlength{\rightskip}{0pt plus 5cm}void put\+\_\+action\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action, }
+\item[{{\bf tree\+\_\+t} $\ast$}]{pallet}
+\end{DoxyParamCaption}
+)}\label{_action_8h_af3e5dac66861012f86b4bab83a9dc535}
+Place saved pallet first in the list of actions 
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+action} & a pointer to allocated list of actions that made change in the database \\
+\hline
+{\em pallet} & a pointer to saved pallet \\
+\hline
+\end{DoxyParams}
+\hypertarget{_action_8h_a13c032524d77429d2dcee9e30ef7cce9}{}\index{Action.\+h@{Action.\+h}!undo\+\_\+last\+\_\+action@{undo\+\_\+last\+\_\+action}}
+\index{undo\+\_\+last\+\_\+action@{undo\+\_\+last\+\_\+action}!Action.\+h@{Action.\+h}}
+\subsubsection[{undo\+\_\+last\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}void undo\+\_\+last\+\_\+action (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_action_8h_a13c032524d77429d2dcee9e30ef7cce9}
+Pop out last made action and print it out, read user input and take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the tree, used as content database \\
+\hline
+{\em last\+\_\+action} & a pointer to allocated list of actions that made change in the database \\
+\hline
+\end{DoxyParams}

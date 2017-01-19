@@ -1,0 +1,91 @@
+\hypertarget{_remove_8h}{}\section{Remove.\+h File Reference}
+\label{_remove_8h}\index{Remove.\+h@{Remove.\+h}}
+
+
+Functions for removing content from stored database tree.  
+
+
+{\ttfamily \#include \char`\"{}Structures.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_remove_8h_ab16d67b23be38c20d91799e7c9bf0af6}{remove\+\_\+item} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, int index, int shelf\+\_\+i, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\item 
+D\+O \hyperlink{_remove_8h_a5145631f1646c68f88b154c02ef545f8}{verify\+\_\+and\+\_\+remove\+\_\+item} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, int index, int shelf\+\_\+i, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\item 
+void \hyperlink{_remove_8h_a44da74f84438a66bccd942195dac1499}{remove\+\_\+goods} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for removing content from stored database tree. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_remove_8h_a44da74f84438a66bccd942195dac1499}{}\index{Remove.\+h@{Remove.\+h}!remove\+\_\+goods@{remove\+\_\+goods}}
+\index{remove\+\_\+goods@{remove\+\_\+goods}!Remove.\+h@{Remove.\+h}}
+\subsubsection[{remove\+\_\+goods}]{\setlength{\rightskip}{0pt plus 5cm}void remove\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_remove_8h_a44da74f84438a66bccd942195dac1499}
+Show content alternatives from the database, ask if user to pick index number or cancel, read user input, and take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & pointer to database of contents in form of a tree \\
+\hline
+{\em last\+\_\+action} & a pointer to the list of previous actions \\
+\hline
+\end{DoxyParams}
+\hypertarget{_remove_8h_ab16d67b23be38c20d91799e7c9bf0af6}{}\index{Remove.\+h@{Remove.\+h}!remove\+\_\+item@{remove\+\_\+item}}
+\index{remove\+\_\+item@{remove\+\_\+item}!Remove.\+h@{Remove.\+h}}
+\subsubsection[{remove\+\_\+item}]{\setlength{\rightskip}{0pt plus 5cm}void remove\+\_\+item (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{int}]{index, }
+\item[{int}]{shelf\+\_\+i, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_remove_8h_ab16d67b23be38c20d91799e7c9bf0af6}
+Remove chosen shelf and content if needed, and add new action in action list 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & pointer to database of contents in form of a tree \\
+\hline
+{\em index} & the number of chosen index in the database \\
+\hline
+{\em shelf\+\_\+i} & the number of shelf in the content's list of shelfs \\
+\hline
+{\em last\+\_\+action} & a pointer to the list of previous actions \\
+\hline
+\end{DoxyParams}
+\hypertarget{_remove_8h_a5145631f1646c68f88b154c02ef545f8}{}\index{Remove.\+h@{Remove.\+h}!verify\+\_\+and\+\_\+remove\+\_\+item@{verify\+\_\+and\+\_\+remove\+\_\+item}}
+\index{verify\+\_\+and\+\_\+remove\+\_\+item@{verify\+\_\+and\+\_\+remove\+\_\+item}!Remove.\+h@{Remove.\+h}}
+\subsubsection[{verify\+\_\+and\+\_\+remove\+\_\+item}]{\setlength{\rightskip}{0pt plus 5cm}D\+O verify\+\_\+and\+\_\+remove\+\_\+item (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{int}]{index, }
+\item[{int}]{shelf\+\_\+i, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_remove_8h_a5145631f1646c68f88b154c02ef545f8}
+Ask user to confirm the remove or cancel command, read user's command, and take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & pointer to database of contents in form of a tree \\
+\hline
+{\em index} & the number of chosen index in the database \\
+\hline
+{\em shelf\+\_\+i} & the number of shelf in the content's list of shelfs \\
+\hline
+{\em last\+\_\+action} & a pointer to the list of previous actions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+user's chosen command 
+\end{DoxyReturn}

@@ -1,0 +1,64 @@
+\hypertarget{_goods_manager_8h}{}\section{Goods\+Manager.\+h File Reference}
+\label{_goods_manager_8h}\index{Goods\+Manager.\+h@{Goods\+Manager.\+h}}
+
+
+A system with functions of text-\/based menu and command handler (based on extended enum C\+O\+M\+M\+A\+N\+D) in order to manage content database. Provides textbased user interface.  
+
+
+{\ttfamily \#include \char`\"{}Input\+Reader.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Strings.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Action.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_goods_manager_8h_a4b380e86bdb6e9cffd9d605666ecf408}{show\+\_\+main\+\_\+menu} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\item 
+void \hyperlink{_goods_manager_8h_a49b6e2f519f3c77828ab2aee18e0632d}{manage\+\_\+goods} (D\+O what, \hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A system with functions of text-\/based menu and command handler (based on extended enum C\+O\+M\+M\+A\+N\+D) in order to manage content database. Provides textbased user interface. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_goods_manager_8h_a49b6e2f519f3c77828ab2aee18e0632d}{}\index{Goods\+Manager.\+h@{Goods\+Manager.\+h}!manage\+\_\+goods@{manage\+\_\+goods}}
+\index{manage\+\_\+goods@{manage\+\_\+goods}!Goods\+Manager.\+h@{Goods\+Manager.\+h}}
+\subsubsection[{manage\+\_\+goods}]{\setlength{\rightskip}{0pt plus 5cm}void manage\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{D\+O}]{what, }
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_goods_manager_8h_a49b6e2f519f3c77828ab2aee18e0632d}
+Use input command to take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em what} & a command based on extended enum C\+O\+M\+M\+A\+N\+D, expected values are A\+D\+D, P\+A\+C\+K, R\+E\+M\+O\+V\+E, E\+D\+I\+T, U\+N\+D\+O, L\+I\+S\+T, Q\+U\+I\+T and A\+G\+A\+I\+N \\
+\hline
+{\em goods\+\_\+db} & a pointer to allocated tree, used as database \\
+\hline
+{\em last\+\_\+action} & a pointer to allocated list of actions that made change in the database \\
+\hline
+\end{DoxyParams}
+\hypertarget{_goods_manager_8h_a4b380e86bdb6e9cffd9d605666ecf408}{}\index{Goods\+Manager.\+h@{Goods\+Manager.\+h}!show\+\_\+main\+\_\+menu@{show\+\_\+main\+\_\+menu}}
+\index{show\+\_\+main\+\_\+menu@{show\+\_\+main\+\_\+menu}!Goods\+Manager.\+h@{Goods\+Manager.\+h}}
+\subsubsection[{show\+\_\+main\+\_\+menu}]{\setlength{\rightskip}{0pt plus 5cm}void show\+\_\+main\+\_\+menu (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_goods_manager_8h_a4b380e86bdb6e9cffd9d605666ecf408}
+Show menu command alternatives, based on expected command values (A\+D\+D, P\+A\+C\+K, R\+E\+M\+O\+V\+E, E\+D\+I\+T, U\+N\+D\+O, L\+I\+S\+T, Q\+U\+I\+T and A\+G\+A\+I\+N) 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to allocated tree, used as database \\
+\hline
+{\em last\+\_\+action} & a pointer to allocated list of actions that made change in the database \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,73 @@
+\hypertarget{_pallet_8h}{}\section{Pallet.\+h File Reference}
+\label{_pallet_8h}\index{Pallet.\+h@{Pallet.\+h}}
+
+
+A text based system to create a list of buying items from the database. Provides textbased user interface.  
+
+
+{\ttfamily \#include \char`\"{}Structures.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_pallet_8h_a8f6398fab4897b0261119d7f2d711776}{show\+\_\+pallet\+\_\+receipt} (\hyperlink{structtree}{tree\+\_\+t} $\ast$pallet)
+\item 
+void \hyperlink{_pallet_8h_a148f3f03b40a95e5fb5ca72685eb3f7c}{add\+\_\+pallet} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structtree}{tree\+\_\+t} $\ast$pallet)
+\item 
+void \hyperlink{_pallet_8h_aefb175da8f70fb7855c2d5dddde3735c}{pack\+\_\+pallet} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A text based system to create a list of buying items from the database. Provides textbased user interface. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_pallet_8h_a148f3f03b40a95e5fb5ca72685eb3f7c}{}\index{Pallet.\+h@{Pallet.\+h}!add\+\_\+pallet@{add\+\_\+pallet}}
+\index{add\+\_\+pallet@{add\+\_\+pallet}!Pallet.\+h@{Pallet.\+h}}
+\subsubsection[{add\+\_\+pallet}]{\setlength{\rightskip}{0pt plus 5cm}void add\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf tree\+\_\+t} $\ast$}]{pallet}
+\end{DoxyParamCaption}
+)}\label{_pallet_8h_a148f3f03b40a95e5fb5ca72685eb3f7c}
+Add items from the pallet to the database 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the tree, used as database \\
+\hline
+{\em pallet} & a pointer to the tree, used as pallet \\
+\hline
+\end{DoxyParams}
+\hypertarget{_pallet_8h_aefb175da8f70fb7855c2d5dddde3735c}{}\index{Pallet.\+h@{Pallet.\+h}!pack\+\_\+pallet@{pack\+\_\+pallet}}
+\index{pack\+\_\+pallet@{pack\+\_\+pallet}!Pallet.\+h@{Pallet.\+h}}
+\subsubsection[{pack\+\_\+pallet}]{\setlength{\rightskip}{0pt plus 5cm}void pack\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_pallet_8h_aefb175da8f70fb7855c2d5dddde3735c}
+Show the index list, allow collect items from the database and save the pallet or cancel and add collected pallet back 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the tree, used as database \\
+\hline
+{\em last\+\_\+action} & a pointer o the list of actions \\
+\hline
+\end{DoxyParams}
+\hypertarget{_pallet_8h_a8f6398fab4897b0261119d7f2d711776}{}\index{Pallet.\+h@{Pallet.\+h}!show\+\_\+pallet\+\_\+receipt@{show\+\_\+pallet\+\_\+receipt}}
+\index{show\+\_\+pallet\+\_\+receipt@{show\+\_\+pallet\+\_\+receipt}!Pallet.\+h@{Pallet.\+h}}
+\subsubsection[{show\+\_\+pallet\+\_\+receipt}]{\setlength{\rightskip}{0pt plus 5cm}void show\+\_\+pallet\+\_\+receipt (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{pallet}
+\end{DoxyParamCaption}
+)}\label{_pallet_8h_a8f6398fab4897b0261119d7f2d711776}
+Show the list of indexes in the pallet 
+\begin{DoxyParams}{Parameters}
+{\em pallet} & a pointer to the tree, used as pallet \\
+\hline
+\end{DoxyParams}

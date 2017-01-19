@@ -1,0 +1,79 @@
+\hypertarget{_list_8h}{}\section{List.\+h File Reference}
+\label{_list_8h}\index{List.\+h@{List.\+h}}
+
+
+Functions for printing indexes from stored database tree. Provides textbased user interface.  
+
+
+{\ttfamily \#include \char`\"{}Structures.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_list_8h_aaaec3149c4ecc77988a8efcd7ab584f4}{list\+\_\+items} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, D\+O what, int $\ast$page\+\_\+index)
+\item 
+int \hyperlink{_list_8h_a0f5062b843ebdf5c6b17cbc0bf01ef18}{list\+\_\+shelfs} (\hyperlink{structlist}{list\+\_\+t} $\ast$shelfs)
+\item 
+void \hyperlink{_list_8h_a9ce112bf3b9eae989e5a130f1598e323}{list\+\_\+goods} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for printing indexes from stored database tree. Provides textbased user interface. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_list_8h_a9ce112bf3b9eae989e5a130f1598e323}{}\index{List.\+h@{List.\+h}!list\+\_\+goods@{list\+\_\+goods}}
+\index{list\+\_\+goods@{list\+\_\+goods}!List.\+h@{List.\+h}}
+\subsubsection[{list\+\_\+goods}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db}
+\end{DoxyParamCaption}
+)}\label{_list_8h_a9ce112bf3b9eae989e5a130f1598e323}
+Show content alternatives from the database, ask if user to pick index number or cancel, read user input, and take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the database of contents in form of a tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{_list_8h_aaaec3149c4ecc77988a8efcd7ab584f4}{}\index{List.\+h@{List.\+h}!list\+\_\+items@{list\+\_\+items}}
+\index{list\+\_\+items@{list\+\_\+items}!List.\+h@{List.\+h}}
+\subsubsection[{list\+\_\+items}]{\setlength{\rightskip}{0pt plus 5cm}int list\+\_\+items (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{D\+O}]{what, }
+\item[{int $\ast$}]{page\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{_list_8h_aaaec3149c4ecc77988a8efcd7ab584f4}
+Print a list of content indexes from database with predetermined limit of indexes per page, read user input, and take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the database of contents in form of a tree \\
+\hline
+{\em what} & a special reason to print out in question-\/line, those are defined as special \+: R\+E\+M\+O\+V\+E, E\+D\+I\+T and P\+A\+C\+K \\
+\hline
+{\em page\+\_\+index} & a pointer to integer that defined as the index of start page (starting from 0 as first page) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+chosen index number or -\/1 as cancel 
+\end{DoxyReturn}
+\hypertarget{_list_8h_a0f5062b843ebdf5c6b17cbc0bf01ef18}{}\index{List.\+h@{List.\+h}!list\+\_\+shelfs@{list\+\_\+shelfs}}
+\index{list\+\_\+shelfs@{list\+\_\+shelfs}!List.\+h@{List.\+h}}
+\subsubsection[{list\+\_\+shelfs}]{\setlength{\rightskip}{0pt plus 5cm}int list\+\_\+shelfs (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{shelfs}
+\end{DoxyParamCaption}
+)}\label{_list_8h_a0f5062b843ebdf5c6b17cbc0bf01ef18}
+Print a list of shelfs, read user input, and take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em shelfs} & a pointer to the list of shelfs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+chosen index number or -\/1 as cancel 
+\end{DoxyReturn}

@@ -1,0 +1,117 @@
+\hypertarget{_input_reader_8h}{}\section{Input\+Reader.\+h File Reference}
+\label{_input_reader_8h}\index{Input\+Reader.\+h@{Input\+Reader.\+h}}
+
+
+A system to read user input data and commands (based on extended enum C\+O\+M\+M\+A\+N\+D). Provides textbased user interface.  
+
+
+{\ttfamily \#include \char`\"{}Structures.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Enums.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+O \hyperlink{_input_reader_8h_a05bf8bf2837045435fa20f876e311283}{read\+\_\+command} (R\+E\+A\+D what, char $\ast$first\+\_\+char)
+\item 
+D\+O \hyperlink{_input_reader_8h_a31bc78edbca83b5fea0d65965a5b2f60}{yes\+\_\+no\+\_\+question} (char $\ast$question)
+\item 
+void \hyperlink{_input_reader_8h_a9474383abbcd34b66a9241d8bf0e9aee}{read\+\_\+shelf} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf})
+\item 
+int \hyperlink{_input_reader_8h_aa26de435f5feb56ca2d395a04fcc1b70}{read\+\_\+integer} (D\+O what, int start\+\_\+number)
+\item 
+void \hyperlink{_input_reader_8h_af631b8ef2bc056c508cee822d3417bab}{read\+\_\+string} (char $\ast$input, D\+O what, int size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A system to read user input data and commands (based on extended enum C\+O\+M\+M\+A\+N\+D). Provides textbased user interface. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_input_reader_8h_a05bf8bf2837045435fa20f876e311283}{}\index{Input\+Reader.\+h@{Input\+Reader.\+h}!read\+\_\+command@{read\+\_\+command}}
+\index{read\+\_\+command@{read\+\_\+command}!Input\+Reader.\+h@{Input\+Reader.\+h}}
+\subsubsection[{read\+\_\+command}]{\setlength{\rightskip}{0pt plus 5cm}D\+O read\+\_\+command (
+\begin{DoxyParamCaption}
+\item[{R\+E\+A\+D}]{what, }
+\item[{char $\ast$}]{first\+\_\+char}
+\end{DoxyParamCaption}
+)}\label{_input_reader_8h_a05bf8bf2837045435fa20f876e311283}
+Read user input, identify the command and/or handle wrong inputs 
+\begin{DoxyParams}{Parameters}
+{\em what} & a value in range of enum R\+E\+A\+D, each value identifies different menu and accept corresponding user commands for each menu \\
+\hline
+{\em first\+\_\+char} & a pointer to first char in the user input command, is used in case developer want to read the first input character before calling the read\+\_\+command function, otherwise pass N\+U\+L\+L pointer if this feature is not needed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+identified user command in range of enum C\+O\+M\+M\+A\+N\+D, that also corresponds to chosen menu 
+\end{DoxyReturn}
+\hypertarget{_input_reader_8h_aa26de435f5feb56ca2d395a04fcc1b70}{}\index{Input\+Reader.\+h@{Input\+Reader.\+h}!read\+\_\+integer@{read\+\_\+integer}}
+\index{read\+\_\+integer@{read\+\_\+integer}!Input\+Reader.\+h@{Input\+Reader.\+h}}
+\subsubsection[{read\+\_\+integer}]{\setlength{\rightskip}{0pt plus 5cm}int read\+\_\+integer (
+\begin{DoxyParamCaption}
+\item[{D\+O}]{what, }
+\item[{int}]{start\+\_\+number}
+\end{DoxyParamCaption}
+)}\label{_input_reader_8h_aa26de435f5feb56ca2d395a04fcc1b70}
+Read user input to identify the input number and/or handle wrong values 
+\begin{DoxyParams}{Parameters}
+{\em what} & decides what to do different when wrong user input appear (cases P\+R\+I\+C\+E, A\+M\+O\+U\+N\+T, P\+A\+C\+K, E\+D\+I\+T and L\+I\+S\+T; other values make no difference) \\
+\hline
+{\em start\+\_\+number} & if the value is greater than or equals to zero, the integer will be used as start of the input integer, otherwise pass -\/1 if this feature is not needed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+readed integer, in cases with E\+D\+I\+T and L\+I\+S\+T it can return -\/1 if the user input were wrong 
+\end{DoxyReturn}
+\hypertarget{_input_reader_8h_a9474383abbcd34b66a9241d8bf0e9aee}{}\index{Input\+Reader.\+h@{Input\+Reader.\+h}!read\+\_\+shelf@{read\+\_\+shelf}}
+\index{read\+\_\+shelf@{read\+\_\+shelf}!Input\+Reader.\+h@{Input\+Reader.\+h}}
+\subsubsection[{read\+\_\+shelf}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+shelf (
+\begin{DoxyParamCaption}
+\item[{{\bf shelf\+\_\+t} $\ast$}]{shelf}
+\end{DoxyParamCaption}
+)}\label{_input_reader_8h_a9474383abbcd34b66a9241d8bf0e9aee}
+Read user input to fill shelf values with corresponding data and handle wrong inputs 
+\begin{DoxyParams}{Parameters}
+{\em shelf} & a pointer to allocated shelf \\
+\hline
+\end{DoxyParams}
+\hypertarget{_input_reader_8h_af631b8ef2bc056c508cee822d3417bab}{}\index{Input\+Reader.\+h@{Input\+Reader.\+h}!read\+\_\+string@{read\+\_\+string}}
+\index{read\+\_\+string@{read\+\_\+string}!Input\+Reader.\+h@{Input\+Reader.\+h}}
+\subsubsection[{read\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input, }
+\item[{D\+O}]{what, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{_input_reader_8h_af631b8ef2bc056c508cee822d3417bab}
+Read user input string and handle wrong input values, such as too long input string or if user hasn't typed anything before pressing E\+N\+T\+E\+R 
+\begin{DoxyParams}{Parameters}
+{\em input} & pointer to allocated string place \\
+\hline
+{\em what} & decides which message to print out in case the input is wrong, for now implemented only N\+A\+M\+E and D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N messages \\
+\hline
+{\em size} & the size of the string excluding the end char '\textbackslash{}0' \\
+\hline
+\end{DoxyParams}
+\hypertarget{_input_reader_8h_a31bc78edbca83b5fea0d65965a5b2f60}{}\index{Input\+Reader.\+h@{Input\+Reader.\+h}!yes\+\_\+no\+\_\+question@{yes\+\_\+no\+\_\+question}}
+\index{yes\+\_\+no\+\_\+question@{yes\+\_\+no\+\_\+question}!Input\+Reader.\+h@{Input\+Reader.\+h}}
+\subsubsection[{yes\+\_\+no\+\_\+question}]{\setlength{\rightskip}{0pt plus 5cm}D\+O yes\+\_\+no\+\_\+question (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{question}
+\end{DoxyParamCaption}
+)}\label{_input_reader_8h_a31bc78edbca83b5fea0d65965a5b2f60}
+Print the question, read user input, identify the command and handle wrong inputs 
+\begin{DoxyParams}{Parameters}
+{\em question} & the question string to print out so the user can answer it by only using Y\+E\+S or N\+O commands \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Y\+E\+S or N\+O user command 
+\end{DoxyReturn}

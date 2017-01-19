@@ -1,0 +1,108 @@
+\hypertarget{_add_8h}{}\section{Add.\+h File Reference}
+\label{_add_8h}\index{Add.\+h@{Add.\+h}}
+
+
+Functions for adding contents to stored database tree. Provides textbased user interface.  
+
+
+{\ttfamily \#include \char`\"{}Structures.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_add_8h_aaa413c92dfeb85eafeae07d505621f3a}{add\+\_\+shelf} (\hyperlink{structlist}{list\+\_\+t} $\ast$shelfs, \hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf})
+\item 
+void \hyperlink{_add_8h_acea2cbc7f2ea67ceca70186d4e843ff8}{read\+\_\+and\+\_\+verify\+\_\+shelf} (\hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, \hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, char $\ast$print, \hyperlink{structcontent}{content\+\_\+t} $\ast$\hyperlink{structcontent}{content})
+\item 
+void \hyperlink{_add_8h_a6ed40496b53a3ff74a6bc9d0371bc9ee}{add\+\_\+item} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structcontent}{content\+\_\+t} $\ast$input, \hyperlink{structshelf}{shelf\+\_\+t} $\ast$\hyperlink{structshelf}{shelf}, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\item 
+void \hyperlink{_add_8h_ac3b6b410f2f23eb8bdb47439247d8b86}{add\+\_\+goods} (\hyperlink{structtree}{tree\+\_\+t} $\ast$goods\+\_\+db, \hyperlink{structlist}{list\+\_\+t} $\ast$last\+\_\+action)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for adding contents to stored database tree. Provides textbased user interface. 
+
+\begin{DoxyAuthor}{Author}
+Sergej Maleev 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 Nov 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_add_8h_ac3b6b410f2f23eb8bdb47439247d8b86}{}\index{Add.\+h@{Add.\+h}!add\+\_\+goods@{add\+\_\+goods}}
+\index{add\+\_\+goods@{add\+\_\+goods}!Add.\+h@{Add.\+h}}
+\subsubsection[{add\+\_\+goods}]{\setlength{\rightskip}{0pt plus 5cm}void add\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_add_8h_ac3b6b410f2f23eb8bdb47439247d8b86}
+Handle the user input of a content and/or input of a shelf, ask the user to confirm its choise, and take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the database of contents in form of a tree \\
+\hline
+{\em last\+\_\+action} & a pointer to the list of previous actions \\
+\hline
+\end{DoxyParams}
+\hypertarget{_add_8h_a6ed40496b53a3ff74a6bc9d0371bc9ee}{}\index{Add.\+h@{Add.\+h}!add\+\_\+item@{add\+\_\+item}}
+\index{add\+\_\+item@{add\+\_\+item}!Add.\+h@{Add.\+h}}
+\subsubsection[{add\+\_\+item}]{\setlength{\rightskip}{0pt plus 5cm}void add\+\_\+item (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{{\bf content\+\_\+t} $\ast$}]{input, }
+\item[{{\bf shelf\+\_\+t} $\ast$}]{shelf, }
+\item[{{\bf list\+\_\+t} $\ast$}]{last\+\_\+action}
+\end{DoxyParamCaption}
+)}\label{_add_8h_a6ed40496b53a3ff74a6bc9d0371bc9ee}
+Add content to the database and/or the shelf, add new action node in last\+\_\+action list. After use of current function the content input has to be checked, if the shelf list is set to N\+U\+L\+L, then it is not linked to the database tree. Also shelf input has to be checked according to the description for add\+\_\+shelf function. 
+\begin{DoxyParams}{Parameters}
+{\em goods\+\_\+db} & a pointer to the database of contents in form of a tree \\
+\hline
+{\em input} & a pointer of inputting content \\
+\hline
+{\em shelf} & a pointer of inputting shelf \\
+\hline
+{\em last\+\_\+action} & a pointer to the list of previous actions \\
+\hline
+\end{DoxyParams}
+\hypertarget{_add_8h_aaa413c92dfeb85eafeae07d505621f3a}{}\index{Add.\+h@{Add.\+h}!add\+\_\+shelf@{add\+\_\+shelf}}
+\index{add\+\_\+shelf@{add\+\_\+shelf}!Add.\+h@{Add.\+h}}
+\subsubsection[{add\+\_\+shelf}]{\setlength{\rightskip}{0pt plus 5cm}int add\+\_\+shelf (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{shelfs, }
+\item[{{\bf shelf\+\_\+t} $\ast$}]{shelf}
+\end{DoxyParamCaption}
+)}\label{_add_8h_aaa413c92dfeb85eafeae07d505621f3a}
+Insert shelf into the list or add it's amount to the existing shelf 
+\begin{DoxyParams}{Parameters}
+{\em shelfs} & a pointer to the list of shelfs \\
+\hline
+{\em shelf} & a pointer to the shelf for add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the index number where in the list of shelfs the shelf was placed 
+\end{DoxyReturn}
+\hypertarget{_add_8h_acea2cbc7f2ea67ceca70186d4e843ff8}{}\index{Add.\+h@{Add.\+h}!read\+\_\+and\+\_\+verify\+\_\+shelf@{read\+\_\+and\+\_\+verify\+\_\+shelf}}
+\index{read\+\_\+and\+\_\+verify\+\_\+shelf@{read\+\_\+and\+\_\+verify\+\_\+shelf}!Add.\+h@{Add.\+h}}
+\subsubsection[{read\+\_\+and\+\_\+verify\+\_\+shelf}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+and\+\_\+verify\+\_\+shelf (
+\begin{DoxyParamCaption}
+\item[{{\bf shelf\+\_\+t} $\ast$}]{shelf, }
+\item[{{\bf tree\+\_\+t} $\ast$}]{goods\+\_\+db, }
+\item[{char $\ast$}]{print, }
+\item[{{\bf content\+\_\+t} $\ast$}]{content}
+\end{DoxyParamCaption}
+)}\label{_add_8h_acea2cbc7f2ea67ceca70186d4e843ff8}
+Read new shelf input and check if it not exists already in the database, and take corresponding action 
+\begin{DoxyParams}{Parameters}
+{\em shelf} & a pointer to the shelf where readed data will be stored \\
+\hline
+{\em goods\+\_\+db} & a pointer to the database of contents in form of a tree \\
+\hline
+{\em print} & special string to print before word shelf, strings N\+E\+W and T\+H\+E are currently used with this function \\
+\hline
+{\em last\+\_\+action} & a pointer to the list of previous actions \\
+\hline
+\end{DoxyParams}
